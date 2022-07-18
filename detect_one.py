@@ -186,7 +186,9 @@ if __name__ == '__main__':
     weights = './weights/last.pt'
     cfg_path = './models/yolov5s.yaml'
     model = load_model(weights, cfg_path, device)
-    root = '/home/xialuxi/work/dukto/data/CCPD2020/CCPD2020/images/test/'
-    image_path = 'F:/Android/task/yolov5-car-plate/data/images/test1.jpg'
+    image_path = 'F:/Android/task/yolov5-airplane_landmark/data/images/test2.jpg'
     detect_one(model, image_path, device)
     print('over')
+    result=cv2.imread('./result.jpg')
+    cv2.imshow("检测结果",result)
+    cv2.waitKey(0)
